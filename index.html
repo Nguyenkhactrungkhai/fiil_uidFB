@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Trích xuất ID</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="file-input">
+        <input type="file" id="fileInput" accept=".txt" onchange="loadFile(event)"> <br>
+        <label for="fileInput" class="file-label">Chọn file .txt</label>
+    </div>
+    <textarea id="inputText" placeholder="Nhập văn bản có chứa ID hoặc tải lên file .txt..."></textarea>
+    <button onclick="extractIDs()">Trích xuất ID</button>
+    <div id="loading" class="loading">Đang xử lý...</div>
+    <div id="result" class="results">
+        <h3>ID được trích xuất:</h3>
+        <ul id="idList"></ul>
+        <button onclick="exportToFile()">Xuất ra File</button>
+        <p>Số lượng ID: <span id="count">0</span></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
